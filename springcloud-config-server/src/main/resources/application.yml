@@ -10,7 +10,7 @@ spring:
       server:
         native:
           # 不指定路径的话，默认搜索 resources 目录
-          search-locations: C:/workspack/xzyspringcloud2/config/
+          search-locations: D:/workspack/xzyspringcloud2/config/
 
 eureka:
   instance:
