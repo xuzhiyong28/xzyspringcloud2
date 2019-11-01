@@ -17,3 +17,8 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:9527/eureka/
+
+#配置对eureka-client服务会采用RoundRobinRule方式的负载均衡策略
+eureka-client:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule

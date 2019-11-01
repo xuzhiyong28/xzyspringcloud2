@@ -6,9 +6,12 @@ spring:
 eureka:
   instance:
     hostname: localhost
+    prefer-ip-address: true #允许IP是hostname
   client:
     serviceUrl:
+      #单机版本
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      #defaultZone: http://eureka7002.com:9528/eureka/
     register-with-eureka: false #  默认为 true。设为 false，仅作为服务中心，不作为服务客户端。
     fetch-registry: false # 默认为true。设为false，不从服务中心检索注册的服务。
   server:
