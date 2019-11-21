@@ -41,6 +41,13 @@ public class EurekaRibbonController {
     }
 
 
+    @RequestMapping("/ribbonInfo4")
+    public String ribbonInfo4(){
+        String message  = eurekaRibbonService.hystrixGetInfoError();
+        return "获取的信息:" + message;
+    }
+
+
     @RequestMapping("/testRibbon")
     public String testRibbon(){
         ServiceInstance instance = loadBalancerClient.choose("eureka-client");

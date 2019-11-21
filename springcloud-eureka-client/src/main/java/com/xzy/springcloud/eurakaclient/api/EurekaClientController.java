@@ -26,4 +26,9 @@ public class EurekaClientController {
         String message = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getServletPath();
         return message;
     }
+
+    @RequestMapping("/infoError")
+    public String infoError(HttpServletRequest request){
+        throw new RuntimeException("获取服务信息不可用");
+    }
 }
