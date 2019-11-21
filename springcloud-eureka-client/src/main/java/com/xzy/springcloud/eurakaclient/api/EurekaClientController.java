@@ -15,9 +15,10 @@ public class EurekaClientController {
 
     @RequestMapping("/info")
     public String info(HttpServletRequest request) {
+        System.out.println("==============阻塞开始================");
         try {
             //30秒延迟
-            TimeUnit.SECONDS.sleep(RandomUtils.nextInt(3) );
+            TimeUnit.SECONDS.sleep(RandomUtils.nextInt(6) );
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
