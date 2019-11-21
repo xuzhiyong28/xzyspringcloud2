@@ -30,3 +30,10 @@ zuul:
     api-feign:
       path: /feign/*
       serviceId: eureka-discovery-feign
+  host:
+    connect-timeout-millis: 60000
+    socket-timeout-millis: 60000
+
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
